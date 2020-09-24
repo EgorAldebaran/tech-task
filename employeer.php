@@ -14,7 +14,7 @@
         <script src='function.js'></script>
     </head>
     <body>
-        <h1>employeer</h1>
+        <h1>main employeer</h1>
         <a href="index.php">main</a>
     </body>
 </html>
