@@ -1,0 +1,5 @@
+<?php
+
+include('connect.php');
+
+$sql = "INSERT INTO employeer (name, surname, lastname, sex, wage, group) values (name, surname, lastname, sex, wage, group) "
