@@ -14,7 +14,7 @@
         <script src='function.js'></script>
     </head>
     <body>
-        <h1>master the best</h1>
+        <h1>master of coding</h1>
         <a href="group.php">group-r</a><br/><br/>
         <a href="employeer.php">employeer-e</a>
     </body>
