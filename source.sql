@@ -12,6 +12,7 @@ CREATE TABLE `employeer` (
   `group` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
 --
 -- Dumping data for table `employeer`
 --

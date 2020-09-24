@@ -17,5 +17,15 @@
         <h1>master of coding</h1>
         <a href="group.php">group-r</a><br/><br/>
         <a href="employeer.php">employeer-e</a>
+        <form>
+            <input type="text" id="name">
+            <input type="text" id="surname">
+            <input type="text" id="lastname">
+            <input type="text" id="sex">
+            <input type="text" id="wage">
+            <input type="text" id="group">
+            <button type="button" class="btn btn-danger" id="go">go</button>
+        </form>
+        <?php  include('fetch_all.php');?>
     </body>
 </html>
