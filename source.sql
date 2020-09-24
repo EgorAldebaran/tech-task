@@ -37,6 +37,6 @@ ALTER TABLE `students`
 --
 -- AUTO_INCREMENT for table `students`
 --
-ALTER TABLE `students`
+ALTER TABLE `people`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
