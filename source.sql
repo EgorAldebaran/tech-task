@@ -13,21 +13,21 @@ CREATE TABLE `employeer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `human`
+-- Dumping data for table `employeer`
 --
 
 
--- Indexes for table `human`
+-- Indexes for table `employeer`
 --
-ALTER TABLE `human`
+ALTER TABLE `employeer`
   ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `human`
+-- AUTO_INCREMENT for table `employeer`
 --
-ALTER TABLE `human`
+ALTER TABLE `employeer`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
