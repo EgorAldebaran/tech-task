@@ -2,7 +2,7 @@
 
 include('connect.php');
 
-$sql = "insert into employeer values ('0', 'queen', 'diamonds', 'lisper', 'man', 101, 'manager');";
+$sql = "insert into employeer (name, surname, lastname, sex, wage, team) values('$name', '$surname', '$lastname', '$sex', $wage, '$team')";
 
 if ($conn->multi_query($sql) === TRUE) {
     echo '<script>console.log("new records created successfully")</script>';

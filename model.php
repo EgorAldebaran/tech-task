@@ -5,8 +5,7 @@ $surname = htmlentities(trim($_POST['surname']));
 $lastname = htmlentities(trim($_POST['lastname']));
 $sex = htmlentities(trim($_POST['sex']));
 $wage = htmlentities($_POST['wage']);
-$group = htmlentities(trim($_POST['group']));
+$team = $_POST['team'];
+
 
 include('insert.php');
-
-echo 'test';
