@@ -16,5 +16,22 @@
     <body>
         <h1>group</h1>
         <a href="index.php">main</a>
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>пол</th>
+                        <th>заработная плата</th>
+                        <th>название отдела</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  include('fetch_all.php');?>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

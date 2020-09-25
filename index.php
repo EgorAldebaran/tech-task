@@ -26,6 +26,6 @@
             <input type="text" id="group">
             <button type="button" class="btn btn-danger" id="go">go</button>
         </form>
-        <?php  include('fetch_all.php');?>
+        <?php /* include('fetch_all.php')*/;?>
     </body>
 </html>
