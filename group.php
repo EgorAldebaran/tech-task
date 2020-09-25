@@ -1,3 +1,4 @@
+<?php  include('delete.php');?>
 <!doctype html>
 <html lang='en'>
     <head>
@@ -26,6 +27,8 @@
                         <th>пол</th>
                         <th>заработная плата</th>
                         <th>название отдела</th>
+                        <th>удалить</th>
+                        <th>редактировать</th>
                     </tr>
                 </thead>
                 <tbody>
