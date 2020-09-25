@@ -35,6 +35,6 @@
                     <?php  include('fetch_all.php');?>
                 </tbody>
             </table>
-        </div>
+
     </body>
 </html>
