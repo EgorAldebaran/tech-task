@@ -15,7 +15,7 @@
     </head>
     <body>
         <h1>master of coding the kung-fu</h1>
-        <a href="group.php">group-r</a><br/><br/>
+        <a href="team.php">team-r</a><br/><br/>
         <a href="employeer.php">employeer-e</a>
         <form>
             <input type="text" id="name">
@@ -23,9 +23,27 @@
             <input type="text" id="lastname">
             <input type="text" id="sex">
             <input type="text" id="wage">
-            <input type="text" id="group">
+            <input type="text" id="team">
             <button type="button" class="btn btn-danger" id="go">go</button>
         </form>
-        <?php /* include('fetch_all.php')*/;?>
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>пол</th>
+                        <th>заработная плата</th>
+                        <th>название отдела</th>
+                        <th>удалить</th>
+                        <th>редактировать</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  include('fetch_all.php');?>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>

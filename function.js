@@ -8,7 +8,7 @@ $(document).ready(function() {
         let lastname = $("#lastname").val()
         let sex = $("#sex").val()
         let wage = $("#wage").val()
-        let group = $("#group").val()
+        let team = $("#team").val()
 
         $.ajax(
             {
@@ -21,7 +21,7 @@ $(document).ready(function() {
                     lastname:lastname,
                     sex:sex,
                     wage:wage,
-                    group:group
+                    team:team
                 },
                 success:function(data) {
                     console.log("success")

@@ -7,8 +7,8 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc())     {
-        echo "<tr><td>".$row['name']. "</td><td>".$row['surname']. "</td><td>".$row['lastname']. "</td><td>".$row['sex']. "</td><td>".$row['wage']. "</td><td>".$row['group']. "</td>";
-        echo '<td><a href="group.php?id='.$row['id'].'"><button type="submit" class="btn btn-danger">delete</a></button>';
+        echo "<tr><td>".$row['name']. "</td><td>".$row['surname']. "</td><td>".$row['lastname']. "</td><td>".$row['sex']. "</td><td>".$row['wage']. "</td><td>".$row['team']. "</td>";
+        echo '<td><a href="team.php?id='.$row['id'].'"><button type="submit" class="btn btn-danger">delete</a></button>';
         echo '<td><a href="edit.php?id='.$row['id'].'"><button type="submit" class="btn btn-primary">edit</a></button></td></tr>';
                    }
 }

@@ -9,7 +9,7 @@ CREATE TABLE `employeer` (
   `lastname` varchar(255) NOT NULL,
   `sex` varchar(255) NOT NULL,
   `wage` int(255) NOT NULL,
-  `group` varchar(255) NOT NULL
+  `team` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
