@@ -1,3 +1,4 @@
+<?php  include('delete.php');?>
 <!doctype html>
 <html lang='en'>
     <head>
@@ -18,13 +19,27 @@
         <a href="team.php">team-r</a><br/><br/>
         <a href="employeer.php">employeer-e</a>
         <form>
-            <input type="text" id="name">
-            <input type="text" id="surname">
-            <input type="text" id="lastname">
-            <input type="text" id="sex">
-            <input type="text" id="wage">
-            <input type="text" id="team">
+            <div class="container">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше Имя">
+            </div>
+            <div class="form-group">
+                <input type="text" id="surname" class="form-control" placeholder="Введите вашу Фамилию">
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastname" class="form-control" placeholder="Введите ваше Отчество">
+            </div>
+            <div class="form-group">
+                <input type="text" id="sex" class="form-control" placeholder="Введите ваш пол">
+            </div>
+            <div class="form-group">
+                <input type="text" id="wage" class="form-control" placeholder="Какая ваша заработная плата">
+            </div>
+            <div class="form-group">
+                <input type="text" id="team" class="form-control" placeholder="к какой группе вы относитесь">
+            </div>
             <button type="button" class="btn btn-danger" id="go">go</button>
+            </div>
         </form>
         <div class="container">
             <table class="table table-bordered">
@@ -40,9 +55,7 @@
                         <th>редактировать</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <?php  include('fetch_all.php');?>
-                </tbody>
+                <?php  include('fetch_all.php');?>
             </table>
         </div>
     </body>

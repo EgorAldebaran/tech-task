@@ -2,9 +2,11 @@
 
 include('connect.php');
 
-$id = $_GET['id'];
+$id = $_GET['employeer_id'];
 
-$sql = "DELETE FROM employeer WHERE id='$id'";
+
+
+$sql = "delete from employeer where employeer_id = '$id'";
 
 if ($conn->query($sql) === TRUE) {
     echo '<script>console.log("record success delete!")</script>';
