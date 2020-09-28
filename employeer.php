@@ -1,3 +1,4 @@
+<?php  include('delete.php');?>
 <!doctype html>
 <html lang='en'>
     <head>
@@ -10,11 +11,53 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
-        <title>master</title>
+        <title>master crud tech task</title>
         <script src='function.js'></script>
     </head>
     <body>
-        <h1>main employeer</h1>
+        <h1>master of coding the kung-fu</h1>
+        <a href="team.php">team-r</a><br/><br/>
+        <a href="employeer.php">employeer-e</a>
+        <form>
+            <div class="container">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше Имя">
+            </div>
+            <div class="form-group">
+                <input type="text" id="surname" class="form-control" placeholder="Введите вашу Фамилию">
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastname" class="form-control" placeholder="Введите ваше Отчество">
+            </div>
+            <div class="form-group">
+                <input type="text" id="sex" class="form-control" placeholder="Введите ваш пол">
+            </div>
+            <div class="form-group">
+                <input type="text" id="wage" class="form-control" placeholder="Какая ваша заработная плата">
+            </div>
+            <div class="form-group">
+                <input type="text" id="team" class="form-control" placeholder="к какой группе вы относитесь">
+            </div>
+            <button type="button" class="btn btn-danger" id="go">go</button>
+            </div>
+        </form>
         <a href="index.php">main</a>
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>пол</th>
+                        <th>заработная плата</th>
+                        <th>название отдела</th>
+                        <th>удалить</th>
+                        <th>редактировать</th>
+                    </tr>
+                </thead>
+                <?php  include('fetch_all.php');?>
+            </table>
+        </div>
     </body>
 </html>

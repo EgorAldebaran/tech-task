@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = 'localhost';
 $username = 'employeer';
 $password = 'company';

@@ -34,3 +34,9 @@ $(document).ready(function() {
         )
     })
 })
+
+$(document).ready(function() {
+    $.post("fetch_all.php", function(data) {
+        $("#result").html(data)
+    })
+})
