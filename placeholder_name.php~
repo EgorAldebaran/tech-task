@@ -1,0 +1,19 @@
+<?php
+
+include('connect.php');
+
+$id = $_GET['id'];
+
+$sql = "SELECT name FROM employeer WHERE id=$id";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // outpt data of each row
+    while($row = $result->fetch_assoc()) {
+        echo $row['name']        ;
+    }
+}
+else {
+    echo "0 result"    ;
+}
+$conn->close();
