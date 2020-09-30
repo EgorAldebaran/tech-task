@@ -56,5 +56,26 @@
         <div id="result">
 
         </div>
+
+        <div class="container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Отчество</th>
+                        <th>пол</th>
+                        <th>заработная плата</th>
+                        <th>название отдела</th>
+                        <th>удалить</th>
+                        <th>редактировать</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php  include('fetch_all.php');?>
+                </tbody>
+            </table>
+        </div>
+
     </body>
 </html>
