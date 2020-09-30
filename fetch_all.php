@@ -2,7 +2,11 @@
 
 include('connect.php');
 
-$sql = "SELECT * FROM employeer";
+$sql = "select li.employeer_id, li.name, li.surname, li.lastname, li.sex, li.wage, lili.team
+from employeer as li inner join team as lili
+on li.team_id = lili.team_id order by employeer_id;
+ ";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
