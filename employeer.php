@@ -1,3 +1,4 @@
+<?php  include('delete.php');?>
 <!doctype html>
 <html lang='en'>
     <head>
