@@ -21,11 +21,20 @@ if(isset($_POST['wage'])) {
     $wage = $_POST['wage'];
 }
 
-
 if(isset($_POST['team'])) {
     foreach($_POST['team'] as $team) {
 
     }
+}
+
+if ($team == 'junior') {
+    $team = 101;
+}
+else if ($team == 'midle') {
+    $team = 202;
+}
+else if ($team == 'senior') {
+    $team = 303;
 }
 
 $servername = 'localhost';
@@ -35,7 +44,7 @@ $password = 'company';
 
 $conn = new mysqli($servername, $username, $dbname, $password);
 
-$sql = "insert into employeer (name, surname, lastname, sex, wage, team, team_id) values ('$name', '$surname', '$lastname', '$sex', $wage, '$team', 101)";
+$sql = "insert into employeer (name, surname, lastname, sex, wage, team_id) values ('$name', '$surname', '$lastname', '$sex', $wage, $team)";
 if ($conn->query($sql) === TRUE) {
     echo '<script>console.log("new record create successfylly!!!!")</script>';
 }
