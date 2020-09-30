@@ -11,35 +11,52 @@
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
         <title>master</title>
-        <script src='function.js'></script>
-        <style>
-         button {
-             position: relative;
-             left: 120px;
-         }
-        </style>
+        <script>
+         $(document).ready(function() {
+             $("form").submit(function(event) {
+                 event.preventDefault();
+                 let formValues = $(this).serialize();
+                 $.post("model.php", formValues, function(data) {
+                     $("#result").html(data);
+                 })
+             })
+         })
+        </script>
     </head>
     <body>
         <div class="container">
-            <div class="form-team">
-                <input type="text" class="form-control" id="name" placeholder="<?php include('placeholder_name.php')  ;?>">
-            </div>
-            <div class="form-team">
-                <input type="text" class="form-control" id="surname" placeholder="<?php include('placeholder_surname.php')  ;?>">
-            </div>
-            <div class="form-team">
-                <input type="text" class="form-control" id="lastname" placeholder="<?php include('placeholder_lastname.php')  ;?>">
-            </div>
-            <div class="form-team">
-                <input type="text" class="form-control" id="sex" placeholder="<?php include('placeholder_sex.php')  ;?>">
-            </div>
-            <div class="form-team">
-                <input type="text" class="form-control" id="wage" placeholder="<?php include('placeholder_wage.php')  ;?>">
-            </div>
-                <input type="text" class="form-control" id="team" placeholder="<?php include('placeholder_team.php')  ;?>">
-            </div>
+            <form>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="<?php  include('placeholder_name.php');?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="surname" placeholder="<?php  include('placeholder_surname.php');?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="lastname" placeholder="<?php  include('placeholder_lastname.php');?>">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="sex" placeholder="<?php  include('placeholder_sex.php');?>">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="wage" placeholder="<?php  include('placeholder_wage.php');?>">
+                </div>
+                <div class="form-group">
+                    <select name="team[]" multiple>
+                        <option value="junior">junior</option>
+                        <option value="midle">midle</option>
+                        <option value="senior">senior</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="send" class="btn btn-primary">
+                </div>
+        </form>
         </div>
-        <button type="button" id="go" class="btn btn-primary">go</button>
+        <div id="result">
+
+        </div>
+
         <div class="container">
             <table class="table table-bordered">
                 <thead>
@@ -55,12 +72,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <?php  include('fetch_all.php');?>
-                    </tr>
+                    <?php  include('fetch_all.php');?>
                 </tbody>
             </table>
         </div>
-        <a href="index.php"><button type="button" id="main-button" class="btn btn-primary">main page</button></a>
+        <a href="index.php">main</a>
     </body>
 </html>
