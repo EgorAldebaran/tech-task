@@ -1,4 +1,3 @@
-<?php  include('delete.php');?>
 <!doctype html>
 <html lang='en'>
     <head>
@@ -11,7 +10,7 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
-        <title>master</title>
+        <title>mega-master</title>
         <script>
          $(document).ready(function() {
              $("form").submit(function(event) {
@@ -28,19 +27,19 @@
         <div class="container">
             <form>
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Введите ваше имя">
+                    <input type="text" name="name" placeholder="<?php  include('placeholder_name.php');?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="surname" placeholder="Введите вашу фамилию">
+                    <input type="text" name="surname" placeholder="<?php  include('placeholder_surname.php');?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="lastname" placeholder="Введите ваше Отчество">
+                    <input type="text" name="lastname" placeholder="<?php  include('placeholder_lastname.php');?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="sex" placeholder="Ваш пол">
+                    <input type="text" name="sex" placeholder="<?php  include('placeholder_sex.php');?>">
                 </div>
                 <div class="form-group">
-                    <input type="number" name="wage" placeholder="Ваша зарплата">
+                    <input type="number" name="wage" placeholder="<?php  include('placeholder_wage.php');?>">
                 </div>
                 <div class="form-group">
                     <select name="team[]" multiple>

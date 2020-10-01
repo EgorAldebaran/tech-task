@@ -14,27 +14,21 @@
         <script src='function.js'></script>
     </head>
     <body>
-        <h1>master</h1>
-        <a href="employeer.php">employeer</a>
-        <a href="team.php">team</a>
+        <h1>team</h1>
+        <a href="index.php">main</a>
         <div class="container">
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Имя</th>
-                        <th>Фамилия</th>
-                        <th>Отчество</th>
-                        <th>пол</th>
-                        <th>заработная плата</th>
-                        <th>название группы</th>
-                        <th>Количество работников</th>
+                        <th>Название отдела</th>
+                        <th>Количество сотрудников отдела</th>
                         <th>максимальная заработная плата</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php  include("fetch_join.php");?>
+                    <?php  include('fetch_team.php');?>
                 </tbody>
             </table>
-        </div>
+
     </body>
 </html>

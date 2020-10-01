@@ -1,24 +1,25 @@
-SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO';
-START TRANSACTION;
-SET time_zone = '+00:00';
-
-CREATE TABLE `team` (
-       `team_id` INT(255) NOT NULL PRIMARY KEY,
-       `title_team` VARCHAR(255) NOT NULL,
-       `number_of_employees` INT(255) NOT NULL,
-       `max_salary` INT(255) NOT NULL
+create table team (
+team_id int not null primary key,
+team varchar(100) not null,
+team_salary int not null,
+number_empl int not null,
+max_salary int not null
 );
 
-CREATE TABLE `employeer` (
-  `employeer_id` int(255) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `name` varchar(255) NOT NULL,
-  `surname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `sex` varchar(255) NOT NULL,
-  `wage` int(255) NOT NULL,
-  `team` varchar(255) NOT NULL,
-  `team_id` INT(255) NOT NULL,
-  FOREIGN KEY (team_id) REFERENCES team(team_id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+create table employeer (
+employeer_id int not null auto_increment primary key,
+name varchar(100) not null,
+surname varchar(100) not null,
+lastname varchar(100),
+sex varchar(100),
+wage int not null,
+team_id int,
+foreign key (team_id) REFERENCES team(team_id)
+);
 
-INSERT INTO team (team_id, title_team, number_of_employees, max_salary) values (101, 'manager', 10, 100000);
+insert into team (team_id, team, team_salary, number_empl, max_salary)
+values (101, 'junior', 100000, 2, 140000);
+insert into team (team_id, team, team_salary, number_empl, max_salary)
+values (202, 'midle', 200000, 2, 300000);
+insert into team (team_id, team, team_salary, number_empl, max_salary)
+values (303, 'senior', 1000000, 1, 3000000);
