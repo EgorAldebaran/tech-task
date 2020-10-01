@@ -26,7 +26,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php  include('fetch_team.php');?>
+
+                    <tr><td>junior</td><td><?php  include('number_junior.php');?></td><td><?php  include('max_salary_junior.php');?></td></tr>
+                    <tr><td>midle</td><td><?php  include('number_midle.php');?></td><td><?php  include('max_salary_midle.php');?></td></tr>
+                    <tr><td>senior</td><td><?php  include('number_senior.php');?></td><td><?php  include('max_salary_senior.php');?></td></tr>
+
                 </tbody>
             </table>
 
