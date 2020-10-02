@@ -11,6 +11,10 @@
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <title>master</title>
         <script>
          $(document).ready(function() {
@@ -25,35 +29,65 @@
         </script>
     </head>
     <body>
+        <!-- место для ввода данных используем bootstrap form validate js -->
         <div class="container">
-            <form>
+            <form class="was-validated">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Введите ваше имя">
+                    <label for="uname">Имя:</label>
+                    <input type="text" class="form-control" id="name" placeholder="введите ваше Имя" name="name" required>
+                    <div class="valid-feedback">valid.</div>
+                    <div class="invalid-feedback">Пожалуйста заполните это поле</div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="surname" placeholder="Введите вашу фамилию">
+                    <label for="uname">Фамилия:</label>
+                    <input type="text" class="form-control" id="surname" placeholder="Введите вашу Фамилию" name="surname" required>
+                    <div class="valid-feedback">хорошо</div>
+                    <div class="invalid-feedback">Пожалуйста заполните это поле</div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="lastname" placeholder="Введите ваше Отчество">
+                    <label for="uname">Отчество:</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Введите ваше Отчество" name="lastname" required>
+                    <div class="valid-feedback">хорошо</div>
+                    <div class="invalid-feedback">Пожалуйста заполните это поле</div>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="sex" placeholder="Ваш пол">
+                    <label for="uname">Пол:</label>
+                    <input type="text" class="form-control" id="sex" placeholder="Укажите Ваш пол" name="sex" required>
+                    <div class="valid-feedback">хорошо</div>
+                    <div class="invalid-feedback">Пожалуйста заполните это поле</div>
                 </div>
                 <div class="form-group">
-                    <input type="number" name="wage" placeholder="Ваша зарплата">
+                    <label for="pwd">Зарплата:</label>
+                    <input type="password" class="form-control" id="wage" placeholder="Какая у вас Зарплата?" name="wage" required>
+                    <div class="valid-feedback">хорошо</div>
+                    <div class="invalid-feedback">Пожалуйста заполните это поле</div>
                 </div>
-                <div class="form-group">
-                    <select name="team[]" multiple>
-                        <option value="junior">junior</option>
-                        <option value="midle">midle</option>
-                        <option value="senior">senior</option>
-                    </select>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <select name="team[]" multiple>
+                            <option value="junior">junior</option>
+                            <option value="midle">midle</option>
+                            <option value="senior">senior</option>
+                            <div class="valid-feedback">хорошо</div>
+                            <div class="invalid-feedback">выберите группу</div>
+                        </select>
+                    </label>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="send" class="btn btn-primary">
-                </div>
-        </form>
+                <button type="submit" class="btn btn-primary">submi</button>
+            </form>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
         <div id="result">
 
         </div>

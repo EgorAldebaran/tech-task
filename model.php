@@ -49,7 +49,7 @@ if ($conn->query($sql) === TRUE) {
     echo '<script>console.log("new record create successfylly!!!!")</script>';
 }
 else {
-    echo "fuck you";
+    echo "big mistake";
 }
 
 $conn->close();
